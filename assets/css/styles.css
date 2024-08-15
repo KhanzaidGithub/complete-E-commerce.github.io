@@ -128,8 +128,7 @@ input {
 }
 
 .grid {
-  /* display: grid;
-  gap: 1.5rem; */
+  gap: 1.5rem;
 }
 
 .section {
@@ -150,6 +149,23 @@ input {
 
 .section__title span {
   color: var(--first-color);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.new__price {
+  color: var(--first-color);
+  font-weight: 600;
+}
+
+.old__price {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  text-decoration: line-through;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -398,11 +414,13 @@ input {
 .products__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
 }
 
 .product__item {
   border: 1px solid var(--border-color);
   border-radius: 1.5rem;
+  transition: all 0.2s var(--transition);
 }
 
 .product__banner {
@@ -411,8 +429,19 @@ input {
 
 .product__banner,
 .product__images {
+  overflow: hidden;
   position: relative;
   display: block;
+}
+
+.product__item:hover .product__img {
+  transform: scale(1.1);
+}
+
+.product__img {
+  border-radius: 0.725rem;
+  vertical-align: middle;
+  transition: all .5s var(--transition);
 }
 
 .product__img.hover {
@@ -442,15 +471,132 @@ input {
   font-size: var(--small-font-size);
   position: relative;
 }
+
 .action__btn::before,
-.action__btn::after{
+.action__btn::after {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
+
+.action__btn::before {
+  content: '';
+  top: -2px;
+  border: 0.5rem solid var(--border-color);
+  border-top-color: var(--first-color);
+}
+
+.action__btn::after {
+  content: attr(aria-label);
+  bottom: 100%;
+  background-color: var(--first-color);
+  color: var(--border-color);
+  font-size: var(--tiny-font-size);
+  white-space: nowrap;
+  padding-inline: 0.625rem;
+  border-radius: 0.25rem;
+  line-height: 2.58rem;
+}
+
+.product__badge {
+  position: absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+  color: var(--first-color);
+  background-color: var(--second-color);
+  padding: 0.25rem 0.625rem;
+  font-size: var(--tiny-font-size);
+  font-weight: var(--weight-500);
+  border-radius: 2.5rem;
+}
+
+.product__badge.light__pink {
+  background-color: hsl(341, 100%, 73%);
+}
+
+.product__badge.light__green {
+  background-color: hsl(155, 100%, 73%);
+}
+
+.product__badge.light__orange {
+  background-color: hsl(24, 100%, 73%);
+}
+
+.product__badge.light__blue {
+  background-color: hsl(202, 100%, 76%);
+}
+
+.product__content {
+  padding: 0.125rem 1.25rem;
+  position: relative;
+}
+
+.product__category {
+  color: var(--text-color-light);
+  font-size: var(--smaller-font-size);
+}
+
+.product__title {
+  font-size: var(--normal-font-size);
+  margin-block: 0.75rem 0.5rem;
+}
+
+.product__rating {
+  color: hsl(42, 100%, 50%);
+  font-size: var(--small-font-size);
+  margin-bottom: 0.75rem;
+}
+
+.product__price {
+  margin-bottom: .5rem;
+}
+
+.product__price.new__price {
+  font-size: var(--large-font-size);
+}
+
+.cart__btn {
+  position: absolute;
+  bottom: 1.6rem;
+  right: 1.25rem;
+}
+
 /* Active Tab */
+.tab__btn.active__tab {
+  color: var(--first-color);
+  background-color: var(--second-color);
+  padding: 0.25rem 0.625rem;
+  font-size: var(--tiny-font-size);
+  font-weight: var(--weight-500);
+}
+
+.tab__item:not(.active__tab) {
+  display: none;
+}
+
 
 /* Product Hover */
+
+.product__img.hover,
+.product__actions,
+.action__btn::before,
+.action__btn::after,
+.product__item:hover .product__img.default {
+  opacity: 0;
+}
+
+.product__item:hover {
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+}
+
+.product__item:hover .product__img.hover,
+.product__item:hover .product__actions,
+.action__btn:hover::before,
+.action__btn:hover::after {
+opacity: 1;
+}
+
+
 
 /*=============== DEALS ===============*/
 
