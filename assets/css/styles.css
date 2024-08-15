@@ -462,6 +462,7 @@ input {
 .action__btn {
   width: 40px;
   height: 40px;
+  position: relative;
   line-height: 42px;
   text-align: center;
   border-radius: 50%;
@@ -469,7 +470,8 @@ input {
   border: 1px solid var(--border-color);
   color: var(--text-color);
   font-size: var(--small-font-size);
-  position: relative;
+  transition: all 0.2s var(--transition);
+
 }
 
 .action__btn::before,
@@ -477,6 +479,7 @@ input {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.77, 1.24);
 }
 
 .action__btn::before {
@@ -593,12 +596,116 @@ input {
 .product__item:hover .product__actions,
 .action__btn:hover::before,
 .action__btn:hover::after {
-opacity: 1;
+  opacity: 1;
 }
 
+/* .action__btn:hover::before,
+.action_btn:hover::after {
+  transform: translateX(-50%) translateY(-0.5rem);
+} */
 
+.action__btn:hover {
+  color: var(--body-color);
+  background-color: var(--first-color);
+  border-color: var(--first-color);
+}
 
 /*=============== DEALS ===============*/
+.deals__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.deals__item:nth-child(1) {
+  background-image: url(../img/deals-1.jpg);
+}
+
+.deals__item:nth-child(2) {
+  background-image: url(../img/deals-2.png);
+}
+
+.deals__item {
+  padding: 3rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.deals__brand {
+  color: var(--first-color);
+  font-family: var(--h3-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.deals__category {
+  font-family: var(--second-font);
+  font-size: var(--small-font-size);
+}
+
+.deals__title {
+  font-size: var(--large-font-size);
+  max-width: 240px;
+  font-weight: var(--weight-400);
+  line-height: 1.3rem;
+}
+
+.deals__price .new__price,
+.deals__price .old__price {
+  font-size: var(--large-font-size);
+}
+
+.deals__price .new__price {
+  color: hsl(352, 100%, 60%);
+}
+
+.deals__countdown-text {
+  margin-bottom: 0.25rem;
+}
+
+.countdown {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.countdown__amount {
+  position: relative;
+}
+
+.countdown__amount::after {
+  content: ':';
+  color: var(--title-color);
+  font-size: var(--large-font-size);
+  position: absolute;
+  right: -25%;
+  top: 20%;
+}
+
+.countdown__period {
+  background-color: var(--first-color);
+  color: var(--body-color);
+  width: 60px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-weight: var(--weight-600);
+  margin-bottom: .5rem;
+  font-size: var(--large-font-size);
+}
+
+.unit {
+  font-size: var(--small-font-size);
+  text-align: center;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.deals__btn .btn {
+  background-color: transparent;
+  color: var(--first-color);
+}
 
 /*=============== NEW ARRIVALS ===============*/
 

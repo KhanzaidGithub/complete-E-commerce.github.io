@@ -155,14 +155,14 @@
     <section class="products section container">
 
       <div class="tab__btns">
-        <div class="tab__btn active-tab">Featured</div>
-        <div class="tab__btn">Popular</div>
-        <div class="tab__btn">New added</div>
+        <div class="tab__btn active-tab" data-target="#featured">Featured</div>
+        <div class="tab__btn" data-target="#popular">Popular</div>
+        <div class="tab__btn" data-target="#new-added">New added</div>
       </div>
 
       <div class="tab__items">
         <!-- Products rows -->
-        <div class="tab__item active__tab">
+        <div class="tab__item active__tab" content id="featured">
           <div class="products__container grid">
             <!-- Each Product -->
             <div class="product__item">
@@ -561,15 +561,15 @@
         </div>
 
         <!-- Products rows -->
-        <div class="tab__item">
+        <div class="tab__item" content id="popular">
           <div class="products__container grid">
             <!-- Each Product -->
             <div class="product__item">
               <div class="product__banner">
                 <a href="./details.html" class="product__images">
-                  <img src="./assets/img/product-1-1.jpg" alt="" class="product__img default">
+                  <img src="./assets/img/product-10-1.jpg" alt="" class="product__img default">
 
-                  <img src="./assets/img/product-1-2.jpg" alt="" class="product__img hover">
+                  <img src="./assets/img/product-10-2.jpg" alt="" class="product__img hover">
                 </a>
 
                 <div class="product__actions">
@@ -665,9 +665,9 @@
             <div class="product__item">
               <div class="product__banner">
                 <a href="./details.html" class="product__images">
-                  <img src="./assets/img/product-3-1.jpg" alt="" class="product__img default">
+                  <img src="./assets/img/product-10-1.jpg" alt="" class="product__img default">
 
-                  <img src="./assets/img/product-3-2.jpg" alt="" class="product__img hover">
+                  <img src="./assets/img/product-10-2.jpg" alt="" class="product__img hover">
                 </a>
 
                 <div class="product__actions">
@@ -812,9 +812,9 @@
             <div class="product__item">
               <div class="product__banner">
                 <a href="./details.html" class="product__images">
-                  <img src="./assets/img/product-6-1.jpg" alt="" class="product__img default">
+                  <img src="./assets/img/product-11-1.jpg" alt="" class="product__img default">
 
-                  <img src="./assets/img/product-6-2.jpg" alt="" class="product__img hover">
+                  <img src="./assets/img/product-11-2.jpg" alt="" class="product__img hover">
                 </a>
 
                 <div class="product__actions">
@@ -961,15 +961,15 @@
         </div>
 
         <!-- Products rows -->
-        <div class="tab__item">
+        <div class="tab__item" content id="new-added">
           <div class="products__container grid">
             <!-- Each Product -->
             <div class="product__item">
               <div class="product__banner">
                 <a href="./details.html" class="product__images">
-                  <img src="./assets/img/product-1-1.jpg" alt="" class="product__img default">
+                  <img src="./assets/img/product-11-1.jpg" alt="" class="product__img default">
 
-                  <img src="./assets/img/product-1-2.jpg" alt="" class="product__img hover">
+                  <img src="./assets/img/product-11-2.jpg" alt="" class="product__img hover">
                 </a>
 
                 <div class="product__actions">
@@ -1357,13 +1357,93 @@
 
           </div>
         </div>
-        
+
       </div>
 
     </section>
 
     <!--=============== DEALS ===============-->
-    <section class="deals"></section>
+    <section class="deals section">
+      <div class="deals__container container grid">
+        <div class="deals__item">
+          <div class="deals__group">
+            <h3 class="deals__brand">Deal of the Day</h3>
+            <span class="deals__category">Limited quantities.</span>
+          </div>
+          <h4 class="deals__title">Summer Collection New Morden Design</h4>
+          <div class="deals__price flex">
+            <span class="new__price">$139.00</span>
+            <span class="old__price">$160.99</span>
+          </div>
+
+          <div class="deals__group">
+            <p class="deals__countdown-text">Hurry Up! Offer End In:</p>
+            <div class="countdown">
+              <div class="countdown__amount">
+                <p class="countdown__period">02</p>
+                <span class="unit">Days</span>
+              </div>
+              <div class="countdown__amount">
+                <p class="countdown__period">22</p>
+                <span class="unit">Hours</span>
+              </div>
+              <div class="countdown__amount">
+                <p class="countdown__period">57</p>
+                <span class="unit">Mins</span>
+              </div>
+              <div class="countdown__amount">
+                <p class="countdown__period">24</p>
+                <span class="unit">Sec</span>
+              </div>
+            </div>
+
+            <div class="deals__btn">
+              <a href="details.html" class="btn btn--md">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="deals__item">
+          <div class="deals__group">
+            <h3 class="deals__brand">Women Clothing</h3>
+            <span class="deals__category">Limited quantities.</span>
+          </div>
+          <h4 class="deals__title">Try something new on vocation</h4>
+          <div class="deals__price flex">
+            <span class="new__price">$139.00</span>
+            <span class="old__price">$160.99</span>
+          </div>
+
+          <div class="deals__group">
+            <p class="deals__countdown-text">Hurry Up! Offer End In:</p>
+            <div class="countdown">
+              <div class="countdown__amount">
+                <p class="countdown__period">02</p>
+                <span class="unit">Days</span>
+              </div>
+              <div class="countdown__amount">
+                <p class="countdown__period">22</p>
+                <span class="unit">Hours</span>
+              </div>
+              <div class="countdown__amount">
+                <p class="countdown__period">57</p>
+                <span class="unit">Mins</span>
+              </div>
+              <div class="countdown__amount">
+                <p class="countdown__period">24</p>
+                <span class="unit">Sec</span>
+              </div>
+            </div>
+
+            <div class="deals__btn">
+              <a href="details.html" class="btn btn--md">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deals Ends here -->
+
+    </section>
 
     <!--=============== NEW ARRIVALS ===============-->
     <section class="new__arrivals"></section>
