@@ -344,16 +344,110 @@ input {
 
 /* Swiper class */
 .swiper {
-  overflow: hidden;
+  overflow: initial;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '';
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   top: -1.875rem;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border-color);
+  background-color: var(--first-color-alt);
+  border-radius: 50%;
+  font-size: var(--tiny-font-size);
+}
+
+.swiper-button-prev {
+  left: initial;
+  right: 2.5rem;
+  transform: rotate(180deg);
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.tab__btns {
+  display: flex;
+  column-gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.tab__btn {
+  background-color: var(--container-color);
+  color: var(--title-color);
+  padding: 1rem 1.25rem 0.875rem;
+  border-radius: 0.25rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-600);
+  cursor: pointer;
+}
+
+.active-tab {
+  color: var(--first-color);
+  background-color: var(--second-color);
 }
 
 /*=============== PRODUCTS ===============*/
+.products__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 
+.product__item {
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+}
+
+.product__banner {
+  padding: 0.625rem 0.75rem 0.75rem;
+}
+
+.product__banner,
+.product__images {
+  position: relative;
+  display: block;
+}
+
+.product__img.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product__actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.action__btn {
+  width: 40px;
+  height: 40px;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--first-color-alt);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  position: relative;
+}
+.action__btn::before,
+.action__btn::after{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* Active Tab */
 
 /* Product Hover */
