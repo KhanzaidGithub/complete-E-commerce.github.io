@@ -7,6 +7,19 @@
 /* Validate if constant exists */
 
 /*=============== IMAGE GALLERY ===============*/
+function imggallery() {
+    let mainImg = document.querySelector('.details__img'); // Corrected the class name here
+    let smallimg = document.querySelectorAll('.details__small-img');
+
+    smallimg.forEach((img) => {
+        img.addEventListener('click', () => {
+            mainImg.src = img.src; // Corrected 'scr' to 'src' and used 'img' instead of 'this'
+        });
+    });
+}
+
+
+imggallery();
 
 /*=============== SWIPER CATEGORIES ===============*/
 var swiper = new Swiper(".mySwiper", {

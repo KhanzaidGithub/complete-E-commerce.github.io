@@ -336,6 +336,21 @@ input {
   color: var(--first-color);
 }
 
+.btn--sm,
+.btn--md {
+  font-family: var(--body-font);
+}
+
+.btn--md {
+  height: 45px;
+  line-height: 42px;
+}
+
+.btn--sm {
+  height: 40px;
+  line-height: 36px;
+}
+
 /*=============== CATEGORIES ===============*/
 .categories {
   overflow: hidden;
@@ -1048,15 +1063,41 @@ input {
   font-size: var(--small-font-size);
 }
 
-.size-active{
+.size-active {
   background-color: var(--first-color);
   color: var(--body-color);
 }
-.details__action{
+
+.details__action {
   display: flex;
   column-gap: 0.37rem;
   margin-bottom: 3.25rem;
 }
+
+.quantity,
+.details__action-btn {
+  border: 1px solid var(--border-color-alt);
+  font-size: var(--small-font-size);
+}
+
+.quantity {
+  max-width: 80px;
+  padding-block: 0.5rem;
+  padding-inline: 1rem .5rem;
+  border-radius: .25rem;
+}
+
+.details__action-btn {
+  line-height: 40px;
+  padding-inline: 0.75rem;
+  color: var(--first-color);
+}
+
+.details__meta {
+  border-top: 1px solid var(--border-color-alt);
+  padding-top: 1rem;
+}
+
 /*=============== DETAILS INFO & REVIEWS ===============*/
 
 /*=============== CART ===============*/
