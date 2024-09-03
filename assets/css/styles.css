@@ -421,8 +421,8 @@ input {
 }
 
 .active-tab {
-  color: var(--first-color);
-  background-color: var(--second-color);
+  /* color: var(--first-color); */
+  /* background-color: var(--second-color); */
 }
 
 /*=============== PRODUCTS ===============*/
@@ -1099,6 +1099,117 @@ input {
 }
 
 /*=============== DETAILS INFO & REVIEWS ===============*/
+.detail__tabs {
+  display: flex;
+  column-gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.detail__tab {
+  font-size: var(--second-font);
+  font-size: var(--large-font-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.detail__tab.active-tab {
+  color: var(--first-color);
+}
+
+.details_tab-content:not(.active-tab) {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info__table tr th,
+.info__table tr td {
+  border: 1px solid var(--border-color-alt);
+  padding: .625rem 1.25rem;
+}
+
+.info__table tr th {
+  text-align: left;
+  font-weight: 500;
+}
+
+.info__table tr td {
+  color: var(--text-color-light);
+}
+
+.reviews__container {
+  padding-bottom: 3rem;
+  row-gap: 1.25rem;
+}
+
+.review__single {
+  border-bottom: 1px solid var(--border-color-alt);
+  padding-bottom: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1.5rem;
+}
+
+.review__single:last-child {
+  padding-bottom: 3rem;
+}
+
+.review__img {
+  width: 70px;
+  border-radius: 50%;
+  padding-bottom: 0.5rem;
+}
+
+.review__title {
+  font-size: var(--tiny-font-size);
+}
+
+.review__data {
+  width: calc(100%-94px);
+}
+
+.review__description {
+  margin-bottom: 0.5rem;
+}
+
+.review__rating {
+  color: hsl(42, 100%, 50%);
+  margin-bottom: 0.25rem;
+}
+
+.review__rating,
+.review__data {
+  font-size: var(--small-font-size);
+}
+
+.review__form-title {
+  font-size: var(--large-font-size);
+  margin-bottom: 1rem;
+}
+
+.rate__product {
+  margin-bottom: 2rem;
+}
+
+.form {
+  row-gap: 1rem;
+}
+
+.form__group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.textarea {
+  padding-block: 1rem;
+  height: 200px;
+  border: 1px solid #e7e7e7;
+  width: 100%;
+}
 
 /*=============== CART ===============*/
 
