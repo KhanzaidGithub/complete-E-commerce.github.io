@@ -1321,6 +1321,56 @@ table {
   position: relative;
 }
 
+.cart__group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+}
+
+.cart__shipping .section__title,
+.cart__total .section__title,
+.cart__coupon .section__title {
+  font-size: var(--large-font-size);
+  margin-bottom: 1rem;
+}
+
+.cart__coupon {
+  margin-top: 3rem;
+}
+
+.coupon__form .form__group {
+  align-items: center;
+}
+
+.cart__total {
+  border: 1px solid var(--border-color-alt);
+  padding: 1.75rem;
+  border-radius: 0.25rem;
+}
+
+.cart__total-table {
+  margin-bottom: 1rem;
+}
+
+.cart__total-table tr td {
+  border: 1px solid var(--border-color-alt);
+  padding: 0.75rem 0.75rem;
+  width: 50%;
+}
+
+.cart__total-title {
+  font-size: var(--small-font-size);
+}
+
+.cart__total-price {
+  color: var(--first-color);
+  font-weight: 600;
+}
+
+.cart__total-btn {
+  display: inline-flex;
+}
+
 /*=============== CART OTHERS ===============*/
 
 /*=============== WISHLIST ===============*/
