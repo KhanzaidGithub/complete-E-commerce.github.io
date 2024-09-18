@@ -125,6 +125,8 @@ input {
   height: 45px;
   border-radius: .25rem;
   font-size: var(--small-font-size);
+  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .grid {
@@ -136,9 +138,9 @@ input {
 }
 
 .section--lg {
-  padding-block: 4rem;
   display: grid;
-  grid-template-columns: 5fr 7fr;
+  /* grid-template-columns: 5fr 7fr; */
+  padding-block: 4rem;
   align-items: center;
 }
 
@@ -284,7 +286,9 @@ input {
 
 /*=============== HOME ===============*/
 
-.home__container {}
+.home {
+  grid-template-columns: 5fr 7fr;
+}
 
 .home__subtitle,
 .home__description {
@@ -317,7 +321,7 @@ input {
 
 /*=============== BUTTONS ===============*/
 .btn {
-  /* display: inline-block; */
+  display: inline-block;
   background-color: var(--first-color);
   border: 2px solid var(--first-color);
   color: var(--body-color);
@@ -1274,11 +1278,13 @@ table {
 .table__price,
 .table__trash,
 .table__description,
-.table__subtotal {
+.table__subtotal,
+.table__stock {
   font-size: var(--small-font-size);
 }
 
-.table__title {
+.table__title,
+.table__stock {
   color: var(--first-color);
 }
 
@@ -1325,6 +1331,7 @@ table {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
+  gap: 1.5rem;
 }
 
 .cart__shipping .section__title,
@@ -1340,6 +1347,10 @@ table {
 
 .coupon__form .form__group {
   align-items: center;
+}
+
+.state {
+  width: 100%;
 }
 
 .cart__total {
@@ -1376,10 +1387,86 @@ table {
 /*=============== WISHLIST ===============*/
 
 /*=============== CHECKOUT ===============*/
+.checkout__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
 
+.checkout__group:nth-child(2) {
+  border: 1px solid var(--border-color-alt);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.checkout__group .section__title {
+  font-size: var(--large-font-size);
+}
+
+.checkout__title {
+  font-size: var(--small-font-size);
+}
+
+.order__table tr th,
+.order__table tr td {
+  border: 1px solid var(--border-color-alt);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.order__table tr th {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+}
+
+.order__img {
+  width: 80px;
+}
+
+.table__quantity,
+.order__subtitle {
+  font-size: var(--small-font-size);
+}
+
+.order__grand-total {
+  font-size: var(--large-font-size);
+  color: var(--first-color);
+  font-weight: 700;
+}
+
+.payment__methods {
+  margin-block: 2.5rem 2.75rem;
+}
+
+.payment__title {
+  margin-bottom: 1.5rem;
+}
+
+.payment__option {
+  margin-bottom: 1rem;
+}
+
+.payment__input {
+  accent-color: var(--first-color);
+}
+.payment__label{
+  font-size: var(--small-font-size);
+}
 /*=============== COMPARE ===============*/
 
 /*=============== LOGIN & REGISTER ===============*/
+.login--register__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+}
+
+.login,
+.register {
+  border: 1px solid var(--border-color-alt);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
 
 /*=============== ACCOUNTS ===============*/
 
