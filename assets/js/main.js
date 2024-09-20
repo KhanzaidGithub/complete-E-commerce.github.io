@@ -11,7 +11,11 @@ if (navToggle) {
 }
 /*===== Hide Show =====*/
 /* Validate if constant exists */
-
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('showMenu')
+    })
+}
 /*=============== IMAGE GALLERY ===============*/
 function imggallery() {
     let mainImg = document.querySelector('.details__img'); // Corrected the class name here
